@@ -1,0 +1,84 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Listado de Personas
+{% endblock %}
+
+{% block content %}
+<br>
+<h3>Número de Personas: {{ numero_personas }}</h3>
+
+
+{% if user.is_authenticated %} 
+<br>
+<form action= "{% url 'crear_personas' %}">
+<button class="btn btn-primary" type="submit">Crear Persona</button>
+</form>
+{% endif%}
+
+<br> <br>
+
+<table id="tabla_datos" class="table">
+
+  <thead>
+    <tr>
+      <th>Nombres</th>
+      <th>Apellidos</th>
+      <th>Cedula</th>
+      <th>Correo</th>
+      <th>Casas</th>
+      <th>Departamentos</th>
+      {% if user.is_authenticated %} 
+      <th>Opciones</th>
+      {% endif%}
+    </tr>
+  </thead>
+
+  {% for e in personas %}
+  <tr>
+    <td> {{e.nombres}}</td>
+    <td> {{e.apellidos}}</td>
+    <td> {{e.cedula}}</td>
+    <td> {{e.correo}}</td>
+    <td> 
+      <ul> <dd>
+      {% for t in e.los_propietarios.all %}
+        <li> 
+          <dd>N°: {{t.id}} <br>
+          Barrio: {{ t.propietario.nombre}} <br>
+          Direccion: {{t.direccion}}<br>
+          Numero Cuartos: {{t.numero_cuartos}}<br>   
+        </li>
+        <br>
+      {% endfor %}
+      </ul>
+    </td>
+    <td> 
+      <ul> <dd>
+      {% for c in e.los_propietarios2.all %}
+        <li> 
+          <dd>N°: {{c.id}} <br>
+          Barrio: {{ c.propietario.nombres}} <br>
+          Direccion: {{c.direccion}}<br>
+          Numero Cuartos: {{c.numero_cuartos}}<br>   
+        </li>
+        <br>
+      {% endfor %}
+      </ul>
+    </td>
+    <td>
+      {% if user.is_authenticated %} 
+      <a class="btn btn-secondary" href="{% url 'editar_persona' e.id %}"> Editar </a>
+      <a class="btn btn-danger" href="{% url 'eliminar_persona' e.id %}" onclick="return confirm('¿Está seguro de la eliminación?')"> Eliminar </a>
+      {% endif %}
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+
+<script type="text/javascript">
+  $(document).ready( function () {
+    $('#tabla_datos').DataTable();
+  });
+</script>
+{% endblock %}

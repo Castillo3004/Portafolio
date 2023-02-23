@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos Etiquetas</title>
+</head>
+<body>
+    
+    <form >
+        
+        <!--Atributos 
+            Value: Valor por defecto
+            Readonly: Solo lectura - Se puede enviar datos
+            Disable: Deshabilitado - No se puede enviar datos
+            Size: Numero de caracteres que se van a ver 
+            Maxlength: El numero maximo de caracteres permitidos
+            Max y min: Se usan para dar limites en input tipo numero
+            Multiple: Seleccionar varios desde un input
+            Pattern: Patron de expresion regular para validar contenido
+            Placeholder: Letras de fondo del input 
+            Required: Valores requeridos para llenar u obligatorios de llenar
+            Step: Intervalos de numeros
+            Autofocus: A que input va el cursor al entrar a la pagina por primera vez
+            Autocomplete: Automcompletado por defecto del navegador
+        --> 
+        
+        <br><br>
+        <input type="text" name="name" value="Carlos" readonly> 
+        
+        <br><br>
+        <input type="text" name="name2" value="Castillo" disabled>
+
+        <br><br>
+        <input type="text" name="name3" size="4">
+
+        <br><br>
+        <input type="text" name="name4" maxlength="4">
+
+        <br><br>
+        <input type="number" name="numero" max="4" min="-5">
+
+        <br><br>
+        <input type="file" name="ficheros" multiple>
+
+        <br><br>
+        <input type="text" name="name5" pattern="[A-Za-z]{3}">
+        <input type="submit" value="Enviar">
+
+        <br><br>
+        <input type="text" name="name5" placeholder="Nombre">
+
+        <br><br>
+        <input type="text" name="name6" required>
+
+        <br><br>
+        <input type="number" name="numero2" step="5">
+
+        <br><br>
+        <input type="text" name="name7" autofocus>
+
+        <br><br>
+        <input type="text" name="name8" autocomplete="off">
+
+        
+    </form>
+
+</body>
+</html>

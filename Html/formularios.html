@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    
+    <h3>Formularios</h3>
+
+    <form action="">
+        <label for="nombre">Email</label>
+        <input type="text" id="nombre" name="name" >
+
+        <br><br>
+        <label for="color">Elige un color: </label>
+        <select id= "color" name="Color" >
+            <option value="" selected disabled>Elige un color</option>
+            <option value="">Rojo</option>
+            <option value="">Verde</option>
+            <option value="">Amarillo</option>
+        </select>
+
+        <br><br>
+        <label for="color2">Elige un color: </label>
+        <select id= "color2" name="Color" size="2">
+            <option value="">Rojo</option>
+            <option value="">Verde</option>
+            <option value="">Amarillo</option>
+        </select>
+
+        <br><br>
+        <label for="color3">Elige un color: </label>
+        <select id= "color3" name="Color" multiple>
+            <option value="">Rojo</option>
+            <option value="">Verde</option>
+            <option value="">Amarillo</option>
+        </select>
+
+        <br><br>
+        <input list="colores4">
+        <datalist id="colores4">
+            <option >Rojo</option>
+            <option >Verde</option>
+            <option >Azul</option>
+            <option >Negro</option>
+            <option >Amarillo</option>
+        </datalist>
+
+
+        <br><br>
+        <label for="text_area">Area de Texto: </label>
+        <textarea name="text_area" id="text_area" cols="30" rows="10"></textarea>
+
+        <br><br>
+        <button type="button" onclick="alert('Hola')">Boton</button>
+
+        <br><br>
+        <button type="submit" >Enviar</button>
+
+    </form>
+</body>
+</html>

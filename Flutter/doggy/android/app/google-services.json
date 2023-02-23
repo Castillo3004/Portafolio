@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "125015530737",
+    "project_id": "doggy-9c368",
+    "storage_bucket": "doggy-9c368.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125015530737:android:c3fdef633f0c1e02cc1d50",
+        "android_client_info": {
+          "package_name": "com.example.doggy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125015530737-fcmrg9o8qck7559els7h0hmlsul8uccr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCj6z92fRRfdHvbgMtb3UE1Ik9viF7cWW8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125015530737-fcmrg9o8qck7559els7h0hmlsul8uccr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

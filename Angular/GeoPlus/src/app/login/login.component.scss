@@ -1,0 +1,115 @@
+.container{
+    position: absolute;
+    background-image: url("../../assets/img/montanas-minimalista-degradado-azul_3840x2160_xtrafondos.com.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    left: 0%;
+    right: 0%;
+    top: 72px;
+    bottom: 0%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.left{
+    display: block;
+    float: left;
+}
+
+.left>img{
+    position: absolute;
+    height: 170px;
+    left: 115px;
+    top: 190px;
+}
+
+.right{
+    display: block;
+    float: right;
+}
+
+.formulario>input{
+    width: 300px;
+    height: 52px;
+    background: #E9F6FF;
+    border-radius: 20px;
+    border: none;
+    font-weight: 500;
+    padding: 0px 15px;
+    
+}
+
+.formulario>input::placeholder{
+    text-align: center;
+    color: #000;
+}
+
+.formulario>input[type]:focus{   
+    border: 2px solid #004B6B;
+    outline: 0 none;
+}
+
+.login{
+    width: 330px;
+    height: 52px;
+    background: #71AFD8;
+    border-radius: 20px;
+    border: none;
+    font-weight: 500;
+}
+
+.login:hover{
+    background-color: #86C3EC;
+    cursor: pointer;
+}
+
+.sign-up{
+    width: 330px;
+    height: 52px;
+    background: #004B6B;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-weight: 500;
+
+}
+.sign-up:hover{
+    background-color: #036690;
+    cursor: pointer; 
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-right{
+    display: block;
+    position: fixed;
+    right: 115px;
+    top: 190px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 30px 37px;
+}
+
+.ipt{
+    margin: 12px 0px;
+}
+
+.OSC{
+    margin-top: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.OSC>a{
+    text-decoration: none;
+    color:#000
+}
+
+.OSC>a:hover{
+    color:#2E3335;
+    text-decoration: underline;
+}

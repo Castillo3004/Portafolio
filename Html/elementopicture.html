@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemento Picture</title>
+</head>
+<body>
+    
+    <!-- El elemento picture hace referencia a diferentes imagenes, dandole a escoger al navegador cual
+    poner segun la pantalla del dispositivo, en el atributo media se describe cuando usar cada imagen,
+    al ultimo es importante poner un 'img'  como hijo en caso de que el navegador no soporte picture-->
+    <picture>
+        <source media="(min-width: 500px)" srcset="img/Logos-6-10-08.png">
+        <source media="(min-width: 300px)" srcset="img/WhatsApp Image 2022-02-12 at 8.35.06 PM.jpeg">
+        <img src="img/Logos-6-10-08.png" alt="Logo Banco Pichincha">
+    </picture>
+    
+    <!-- Se usa mas en dos casos: 
+    Ancho de banda: para dispositivos con pantallas pequeñas no hace falta cargar imagenes muy grandes
+    Soporte de formatos: algunos navegadores no soportan todos lo formatos de imagen, usando <picture>
+    el navegador cogera la primera imagen del formato que reconozca-->
+</body>
+</html>

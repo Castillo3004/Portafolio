@@ -1,0 +1,63 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Listado de Casas
+{% endblock %}
+
+{% block content %}
+<br>
+<h3>Número de Casas: {{ numero_casas }}</h3>
+
+
+{% if user.is_authenticated %} 
+<br>
+<form action= "{% url 'crear_casa' %}">
+<button class="btn btn-primary" type="submit">Crear Casa</button>
+</form>
+{% endif%}
+
+<br> <br>
+
+<table id="tabla_datos" class="table">
+
+  <thead>
+    <tr>
+      <th>Propietario</th>
+      <th>Direccion</th>
+      <th>Barrio</th>
+      <th>Valor de Bien</th>
+      <th>Color</th>
+      <th>Numero de Cuartos</th>
+      <th>Numero de Pisos</th>
+      {% if user.is_authenticated %} 
+      <th>Opciones</th>
+      {% endif%}
+    </tr>
+  </thead>
+
+  {% for e in casas %}
+  <tr>
+    <td> {{e.propietario.nombres}} {{e.propietario.apellidos}} | {{ e.propietario.cedula}}</td>
+    <td> {{e.direccion}}</td>
+    <td> {{e.barrio.nombre}} | {{e.barrio.siglas}}</td>
+    <td> {{e.valor_bien}}</td>
+    <td> {{e.color}}</td>
+    <td> {{e.numero_cuartos}}</td>
+    <td> {{e.numero_pisos}}</td>
+    <td>
+      {% if user.is_authenticated %} 
+      <a class="btn btn-secondary" href="{% url 'editar_casa' e.id %}"> Editar </a>
+      <a class="btn btn-danger" href="{% url 'eliminar_casa' e.id %}" onclick="return confirm('¿Está seguro de la eliminación?')"> Eliminar </a>
+      {% endif %}
+    </td>
+
+  </tr>
+  {% endfor %}
+</table>
+
+<script type="text/javascript">
+  $(document).ready( function () {
+    $('#tabla_datos').DataTable();
+  });
+</script>
+{% endblock %}

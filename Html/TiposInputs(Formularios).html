@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Inputs</title>
+</head>
+<body>
+    <br>
+    <form >
+
+        <label for="name">Nombre: </label>
+        <input type="text" id="name" name="name">
+        
+        <br><br>
+        <label for="isurname">Apellido: </label>
+        <input type="text" id="isurname" name="isurname">
+
+        <br><br>
+        <label for="iemail">Email:</label>
+        <input type="email" name="iemail" id="iemail">
+
+        <br><br>
+        <label for="ipass">Contraseña:</label>
+        <input type="password" name="ipass" id="ipass">
+
+        <!-- En el input de radio, se debe poner el mismo name para poder seleccionar solo uno, y el label es 
+            importante para poderlo seleccionar-->
+        <br><br>
+        <input type="radio" name="color" id="rojo" value="Rojo">
+        <label for="rojo">Rojo</label>
+        <br>
+        <input type="radio" name="color" id="azul" value="Azul">
+        <label for="azul">Azul</label>
+        <br>
+        <input type="radio" name="color" id="amarillo" value="Amarillo">
+        <label for="amarillo">Amarillo</label>
+
+        <br><br>
+        <input type="checkbox" name="red" id="red" value="Rojo">
+        <label for="red">Rojo</label>
+        <br>
+        <input type="checkbox" name="blue" id="blue" value="Azul">
+        <label for="blue">Azul</label>
+        <br>
+        <input type="checkbox" name="green" id="green" value="Verde">
+        <label for="green">Verde</label>
+
+        <br><br>
+        <input type="color" name="col">
+
+        <br><br>
+        <input type="date" name="dates" id="dates">
+        
+        <br><br>
+        <input type="datetime-local" name="fechayhora" id="fechayhora">
+
+        <br><br>
+        <input type="file" name="" id="">
+
+        <br><br>
+        <input type="month" name="" id="">
+
+        <br><br>
+        <input type="number" name="" id="">
+
+        <br><br>
+        <input type="range" name="" id="" min="1" max="30">
+
+        <br><br>
+        <input type="search" name="" id="">
+        
+        <br><br>
+        <input type="tel" name="phone" id="">
+
+        <br><br>
+        <input type="time" name="" id="">
+
+        <br><br>
+        <input type="url" name="" id="">
+
+        <br><br>
+        <input type="week" name="" id="">
+
+            
+
+        <br><br>
+        <input type="button" value="Boton" onclick="alert('Hola')">
+        <Button>Hola</Button>
+        <input type="submit" name="ienviar" id="ienviar" value="Enviar" style="margin-right: 30px;">
+        <input type="reset" name="resetear" id="resetear" value="Limpiar">
+    </form>
+
+    
+</body>
+</html>

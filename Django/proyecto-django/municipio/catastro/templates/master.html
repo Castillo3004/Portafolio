@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css' %}">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+
+    <title>
+      {% block title %}
+      {% endblock %}
+    </title>
+  </head>
+  <body style="padding: 0px;">
+ 
+  <header style="padding: 30px;">
+    <img src="{% static 'images/logo.png' %}" height="10%" width="10%" alt="My image">
+    <h1> Aplicación Municipio - Catastro </h1>
+    <br><span style="color:rgb(227, 170, 13); float:left" class="nombre_usuario"> Bienvenido: {{user.username}} </span>
+    <nav class="top_menu navbar navbar-light">
+      <ul class="nav justify-content-end">
+           
+        {% if user.is_authenticated %}
+        
+        {% endif %}
+        <li><a class="nav-item" style="text-decoration: none;color: white;" href="{% url 'casas' %}">Casas</a></li>
+        <li><a class="nav-item" style="text-decoration: none;color: white;" href="{% url 'departamentos' %}">Departamentos</a></li>
+        <li><a class="nav-item" style="text-decoration: none;color: white;" href="{% url 'personas' %}">Propietario</a></li>
+        <li><a class="nav-item" style="text-decoration: none; color: white;"  href="{% url 'barrios' %}">Barrios</a></li>
+        {% if user.is_authenticated %}
+          <li><a style="text-decoration: none;color: red;" href="{% url 'logout_view' %}">Salir</a></li>
+        {% else %}
+          <li><a style="text-decoration: none; color:rgb(227, 170, 13);" href="{% url 'login' %}">Ingresar</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  </header>
+  <section style="padding: 30px;">
+      {% block content %}
+      {% endblock %}
+      <br><br>
+  </section>
+
+    <footer style="padding: 10px;">
+      <p style="text-align:center">Loja-Ecuador</p>
+      <p style="text-align:center">{% now "j F Y H:i" %}</p>
+    </footer>
+  </body>
+</html>

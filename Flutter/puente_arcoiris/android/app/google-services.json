@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "373720389098",
+    "project_id": "puente-arcoiris-41bbc",
+    "storage_bucket": "puente-arcoiris-41bbc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:373720389098:android:524f6b9f30ec8b6a3ece93",
+        "android_client_info": {
+          "package_name": "com.example.puente_arcoiris"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "373720389098-1hpnuki7br5i76dmkt0me757fvr3boul.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1CtHBGwqF69Wd7DkaKi1ewNklotZAx7Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "373720389098-1hpnuki7br5i76dmkt0me757fvr3boul.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
