@@ -18,4 +18,4 @@ __Proyectos Desarrollados en difrentes Frameworks y Lenguajes:__
 
 __Hoja de Vida:__
 
-[Hoja de Vida](https://utpl-my.sharepoint.com/:b:/g/personal/cacastillo34_utpl_edu_ec/EZZp9HWlNuNIrrJMlhZ9HqYBOkKhJS1sMx3ojDy9PVBsqQ?e=Qv9uBa)
+[Hoja de Vida](https://github.com/Castillo3004/Portafolio/blob/main/recursos%20portafolio/HOJA%20DE%20VIDA%20FINAL%20(CARLOS%20CASTILLO).pdf)
